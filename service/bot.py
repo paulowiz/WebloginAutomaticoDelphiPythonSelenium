@@ -26,6 +26,9 @@ username_textbox.send_keys(username)
 password_textbox = driver.find_element_by_id(passwordid)
 password_textbox.send_keys(password)
 
-
-login_button = driver.find_element_by_id(button)
+try:
+    login_button = driver.find_element_by_id(button)
+except:
+    login_button = driver.find_element_by_name(button)
+        
 login_button.submit()
