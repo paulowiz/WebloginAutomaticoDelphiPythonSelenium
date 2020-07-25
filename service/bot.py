@@ -27,8 +27,10 @@ password_textbox = driver.find_element_by_id(passwordid)
 password_textbox.send_keys(password)
 
 try:
-    login_button = driver.find_element_by_id(button)
-except:
     login_button = driver.find_element_by_name(button)
-        
+except:
+    login_button = driver.find_element_by_id(button)
+   
 login_button.submit()
+
+#driver.maximize_window()
